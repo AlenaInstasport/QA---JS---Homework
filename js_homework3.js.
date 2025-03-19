@@ -1,0 +1,27 @@
+function pow(x, y) {
+   let result = 1;
+   for (let i = 0; i < y; i++) {
+        result *= x; // На кожному кроці помножуємо result на x і зберігаємо результат назад у resul. i - це лічильник, він показує, скільки разів вже виконалося множення.
+   }
+return result;
+}
+
+//Модифікація коду, яка підтримує від'ємні степені
+
+
+function pow(x, y) {
+    let result = 1;
+
+    if (y >= 0) {
+        for (let i = 0; i < y; i++) {
+            result *= x;
+        }
+    } else {
+        for (let i = 0; i < -y; i++) { // -y означає «візьми y і зміни його знак»
+            result *= x;
+        }
+        result = 1 / result;
+    }
+
+    return result;
+}

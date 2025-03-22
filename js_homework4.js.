@@ -1,13 +1,24 @@
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function checkProbabilityTheory(count) {
   let evenCount = 0;
   let oddCount = 0;
+
   for (let i = 0; i < count; i++) { 
-       let randomNumber = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
-       if (randomNumber % 2 === 0) {
-           even++;
-      } else {
-         odd++;
+    let randomNumber = getRandomInt(100, 1000);
+
+    if (randomNumber % 2 === 0) {
+      evenCount++;
+    } else {
+         oddCount++;
       }
   } 
-  return `Кількість парних: ${even}, Кількість непарних: ${odd}`;
+
+  let ratio = oddCount === 0 
+    ? "неможливо розрахувати (усі числа парні)" 
+    : ((evenCount / oddCount) * 100).toFixed(2) + "%";
+
+ return `Кількість згенерованих чисел: ${count}, Кількість парних: ${evenCount}, Кількість непарних: ${oddCount}, Відсоток парних до непарних: ${ratio}`;
 } 

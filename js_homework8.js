@@ -26,4 +26,4 @@ arr.forEach(function(item) {
   }
 });
 
-console.log("Надежные email:", trustedEmails);
+console.log("Надійні email:", trustedEmails);

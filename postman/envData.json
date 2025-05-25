@@ -1,0 +1,10 @@
+﻿[
+  {
+    "baseUrl": "https://qauto.forstudy.space",
+    "envName": "qauto"
+  },
+  {
+    "baseUrl": "https://qauto2.forstudy.space",
+    "envName": "qauto2"
+  }
+]
